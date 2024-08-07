@@ -2,8 +2,8 @@
 import { reactive, computed } from 'vue';
 
 const estado = reactive({
-  numero1: 0,
-  numero2: 0,
+  numero1: '',
+  numero2: '',
   operacao: 'soma',
 });
 
@@ -69,5 +69,16 @@ header {
 h2 {
   text-align: center;
   margin-top: 20px;
+}
+
+/* Remove as setas dos inputs do tipo number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 </style>
